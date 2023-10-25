@@ -6,11 +6,17 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:36:24 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/24 15:37:32 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/10/25 11:16:48 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void bzero(void *s, size_t n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-	
+	char	*a;
+
+	a = s;
+	while (n--)
+		*a++ = 0;
 }

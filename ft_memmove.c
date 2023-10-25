@@ -6,9 +6,11 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:38:59 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/24 15:39:31 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/10/25 11:38:43 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memmove(void *dest, const void *src, size_t n)
 {

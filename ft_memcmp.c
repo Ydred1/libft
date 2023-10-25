@@ -6,11 +6,27 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:47:01 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/24 15:47:58 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/10/25 13:21:57 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+#include "libft.h"
+#include <stdio.h>
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	
+	const char *c1;
+	const char *c2;
+	int i;
+
+	c1 = s1;
+	c2 = s2;
+	i = 0;
+	while (n-- && (c1[i] || c2[i]))
+	{
+		if (c1[i] != c2[i])
+			return (c1[i] - c2[i]);
+		i++;
+	}
+	return (0);
 }

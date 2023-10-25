@@ -6,11 +6,12 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:51:08 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/24 15:51:59 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/10/25 15:14:32 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	
 }

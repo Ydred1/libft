@@ -6,11 +6,13 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:31:42 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/17 15:38:03 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/10/25 14:52:50 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+#include "libft.h"
+
+int ft_strlen(const char *str)
 {
     int length;
 
