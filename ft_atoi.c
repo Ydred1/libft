@@ -6,7 +6,7 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 12:12:11 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/24 14:58:21 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/10/31 17:56:40 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	isnegative = 1;
 	nbrofdigits = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\r' || nptr[i] == '\n' || nptr[i] == '\v' || nptr[i] == '\f')
+	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\r' || \
+	nptr[i] == '\n' || nptr[i] == '\v' || nptr[i] == '\f')
 		i++;
 	if (nptr[i] == '-')
 		isnegative = -1;

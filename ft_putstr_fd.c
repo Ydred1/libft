@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 12:47:43 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/31 17:30:27 by nmillier         ###   ########.fr       */
+/*   Created: 2023/10/31 18:47:26 by nmillier          #+#    #+#             */
+/*   Updated: 2023/10/31 19:40:08 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include <unistd.h>
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (c >= 65 && c <= 90)
-		c += 32;
-	return (c);
+	if (s != NULL)
+		write(fd, s, ft_strlen(s));
 }

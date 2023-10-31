@@ -6,13 +6,13 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:23:59 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/18 12:48:37 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/10/31 17:29:42 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-        c -= 32;
-    return (c);
+	if (c >= 97 && c <= 122)
+		c -= 32;
+	return (c);
 }

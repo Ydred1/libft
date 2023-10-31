@@ -1,48 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 15:55:31 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/31 21:30:56 by nmillier         ###   ########.fr       */
+/*   Created: 2023/10/31 19:14:51 by nmillier          #+#    #+#             */
+/*   Updated: 2023/10/31 21:10:08 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
-int	count_char(int n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	nb;
-	int	digit;
+	char	string[11];
+	int		i;
+	int		digit;
 
-	nb = 0;
-	digit = 1000000000;
-	if (n < 0)
-		nb++;
-	if (n == 0)
-		return (1);
-	while(n / digit % 10 == 0)
-		digit /= 10;
-	while (digit >= 1)
-	{
-		nb++;
-		digit /= 10;
-	}
-	return (nb);
-}
-
-char	*ft_itoa(int n)
-{
-	char *string;
-	int i;
-	int digit;
-
-	string = (char *) malloc((count_char(n) + 1) * sizeof(char));
-	if (string == NULL)
-		return (NULL);
 	i = 0;
 	digit = 1000000000;
 	if (n != 0)
@@ -59,9 +35,9 @@ char	*ft_itoa(int n)
 				string[i++] = (n / digit % 10) + 48;
 			digit /= 10;
 		}
+		string[i] = '\0';
+		write(fd, string, ft_strlen(string));
 	}
 	else
-		string[i++] = '0';
-	string[i] = '\0';
-	return (string);
+		write(fd, "0", 1);
 }

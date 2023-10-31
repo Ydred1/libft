@@ -6,11 +6,27 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:53:31 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/24 15:53:50 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:25:37 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strjoin(char const *s1, char const *s2)
+#include <stdlib.h>
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	
+	char	*newstring;
+	char	*ptr;
+	int		i;
+
+	newstring = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	ptr = newstring;
+	i = 0;
+	while (s1[i])
+		*ptr++ = s1[i++];
+	i = 0;
+	while (s2[i])
+		*ptr++ = s2[i++];
+	*ptr = '\0';
+	return (newstring);
 }
