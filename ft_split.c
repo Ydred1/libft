@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:54:38 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/31 22:57:17 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/11/01 01:10:40 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_countwords(char const *s, char c)
+int	ft_cw(char const *s, char c, int *start, int *end)
 {
 	char	*string;
 	int		nb;
@@ -22,6 +22,8 @@ int	ft_countwords(char const *s, char c)
 	string = (char *)s;
 	nb = 0;
 	flag = 1;
+	*start = 0;
+	*end = 0;
 	while (*string)
 	{
 		if (*string == c && flag == 0)
@@ -39,11 +41,12 @@ int	ft_countwords(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
-	int		i[3] = {0};
+	int		i[3];
 
-	tab = (char **) malloc((ft_countwords(s, c) + 1) * sizeof(char **));
+	tab = (char **) malloc((ft_cw(s, c, &i[0], &i[1]) + 1) * sizeof(char **));
 	if (tab == NULL)
 		return (NULL);
+	i[2] = 0;
 	while (s[i[0]])
 	{
 		while ((s[i[0]] == c && s[i[0]]) || i[0] < i[1])
