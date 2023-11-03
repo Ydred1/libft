@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/21 11:42:57 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/03 14:18:35 by ydred            ###   ########.fr       */
+/*   Created: 2023/11/03 13:55:25 by ydred             #+#    #+#             */
+/*   Updated: 2023/11/03 14:03:32 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	index;
-
-	index = 0;
-	while ((s1[index] || s2[index]) && index < n)
-	{
-		if (s1[index] != s2[index])
-			return ((unsigned char) s1[index] - (unsigned char) s2[index]);
-		index++;
-	} 
-	return (0);
+	write(fd, &c, 1);
 }
