@@ -6,7 +6,7 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 12:12:11 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/31 17:56:40 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/11/03 16:17:20 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	ft_atoi(const char *nptr)
 		isnegative = -1;
 	if (nptr[i] == '+' || nptr[i] == '-')
 		i++;
-	while (nptr[i] == '0' || nptr[i] == ' ')
+	while (nptr[i] == '0')
 		i++;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
