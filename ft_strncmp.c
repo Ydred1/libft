@@ -6,7 +6,7 @@
 /*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 11:42:57 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/03 14:18:35 by ydred            ###   ########.fr       */
+/*   Updated: 2023/11/03 22:53:25 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		if (s1[index] != s2[index])
 			return ((unsigned char) s1[index] - (unsigned char) s2[index]);
 		index++;
-	} 
+	}
 	return (0);
 }

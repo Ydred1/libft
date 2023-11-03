@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:07:17 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/17 15:21:42 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/11/03 23:42:57 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if ((c < 0 || c > 127))
-        return (0);
-    else
-        return (1);
+	if ((c < 0 || c > 127))
+		return (0);
+	else
+		return (1);
 }

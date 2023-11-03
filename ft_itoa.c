@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:55:31 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/31 21:30:56 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/11/03 23:42:29 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	count_char(int n)
 		nb++;
 	if (n == 0)
 		return (1);
-	while(n / digit % 10 == 0)
+	while (n / digit % 10 == 0)
 		digit /= 10;
 	while (digit >= 1)
 	{
@@ -36,31 +36,28 @@ int	count_char(int n)
 
 char	*ft_itoa(int n)
 {
-	char *string;
-	int i;
-	int digit;
+	char	*string;
+	int		i;
+	int		digit;
 
 	string = (char *) malloc((count_char(n) + 1) * sizeof(char));
 	if (string == NULL)
 		return (NULL);
 	i = 0;
 	digit = 1000000000;
-	if (n != 0)
+	while (n / digit % 10 == 0 && n != 0)
+		digit /= 10;
+	if (n < 0)
+		string[i++] = '-';
+	while (digit >= 1 && n != 0)
 	{
-		while (n / digit % 10 == 0)
-			digit /= 10;
 		if (n < 0)
-			string[i++] = '-';
-		while (digit >= 1)
-		{
-			if (n < 0)
-				string[i++] = ((n / digit % 10) * -1) + 48;
-			else
-				string[i++] = (n / digit % 10) + 48;
-			digit /= 10;
-		}
+			string[i++] = ((n / digit % 10) * -1) + 48;
+		else
+			string[i++] = (n / digit % 10) + 48;
+		digit /= 10;
 	}
-	else
+	if (n == 0)
 		string[i++] = '0';
 	string[i] = '\0';
 	return (string);

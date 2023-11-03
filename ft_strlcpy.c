@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:39:45 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/03 13:35:24 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:54:11 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	dst[index] = '\0';
 	return (len);
-
 }

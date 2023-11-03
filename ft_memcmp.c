@@ -6,7 +6,7 @@
 /*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:47:01 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/03 14:25:12 by ydred            ###   ########.fr       */
+/*   Updated: 2023/11/03 22:58:21 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const char *c1;
-	const char *c2;
-	int i;
+	const char	*c1;
+	const char	*c2;
+	int			i;
 
 	c1 = s1;
 	c2 = s2;
