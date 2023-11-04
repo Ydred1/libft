@@ -37,9 +37,21 @@ SOURCES = 	ft_atoi.c		\
 			ft_strtrim.c	\
 			ft_substr.c		\
 			ft_tolower.c	\
-			ft_toupper.c
+			ft_toupper.c	\
+
+SOURCES_BONUS = ft_lstnew.c			\
+				ft_lstadd_front.c	\
+				ft_lstsize.c		\
+				ft_lstlast.c		\
+				ft_lstadd_back.c	\
+				ft_lstdelone.c		\
+				ft_lstclear.c		\
+				ft_lstiter.c		\
+				ft_lstmap.c
 
 OBJS = $(SOURCES:.c=.o)
+
+OBJS_BONUS = $(SOURCES_BONUS:.c=.o)
 
 all: $(NAME)
 
@@ -49,9 +61,13 @@ $(NAME): $(OBJS)
 re: fclean all
 
 clean:
-	rm -rf $(OBJS) 
+	rm -rf $(OBJS)
+	rm -rf $(OBJS_BONUS) 
 
 fclean: clean
 	rm -rf $(NAME)
-			
-.PHONY: all re clean fclean
+
+bonus: $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS_BONUS)
+
+.PHONY: all re clean fclean bonus
