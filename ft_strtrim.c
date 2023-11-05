@@ -6,13 +6,13 @@
 /*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:54:05 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/03 22:52:23 by ydred            ###   ########.fr       */
+/*   Updated: 2023/11/05 10:35:41 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_charset(char c, char *set)
+static int	ft_charset(char c, char *set)
 {
 	while (*set)
 	{

@@ -6,14 +6,14 @@
 /*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:55:31 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/03 23:42:29 by ydred            ###   ########.fr       */
+/*   Updated: 2023/11/05 10:33:31 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int	count_char(int n)
+static int	count_char(int n)
 {
 	int	nb;
 	int	digit;

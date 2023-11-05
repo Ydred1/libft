@@ -68,6 +68,9 @@ fclean: clean
 	rm -rf $(NAME)
 
 bonus: $(OBJS_BONUS)
-	ar rcs $(NAME) $(OBJS_BONUS)
+	@if ! nm -u libft.a | grep lst > /dev/null ;\
+	then ar rcs $(NAME) $(OBJS_BONUS);\
+	printf "Linking bonuses\n";\
+	fi
 
 .PHONY: all re clean fclean bonus

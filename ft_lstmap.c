@@ -6,14 +6,13 @@
 /*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 04:18:30 by ydred             #+#    #+#             */
-/*   Updated: 2023/11/04 07:01:04 by ydred            ###   ########.fr       */
+/*   Updated: 2023/11/05 10:34:01 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static
-t_list	*ft_failedmalloc(t_list *lst, void (*del)(void *))
+static t_list	*ft_failedmalloc(t_list *lst, void (*del)(void *))
 {
 	ft_lstclear(&lst, del);
 	return (NULL);

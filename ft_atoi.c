@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 12:12:11 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/03 16:17:20 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/11/05 10:39:39 by ydred            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	powten(int b, int e)
+static int	powten(int b, int e)
 {
 	while (e-- > 0)
 	{
@@ -21,7 +21,7 @@ int	powten(int b, int e)
 	return (b);
 }
 
-int	toint(const char *nptr, int index, int nbrofdigits)
+static int	toint(const char *nptr, int index, int nbrofdigits)
 {
 	int	nb;
 	int	i;
@@ -46,8 +46,8 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	isnegative = 1;
 	nbrofdigits = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\r' || \
-	nptr[i] == '\n' || nptr[i] == '\v' || nptr[i] == '\f')
+	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\r'
+		|| nptr[i] == '\n' || nptr[i] == '\v' || nptr[i] == '\f')
 		i++;
 	if (nptr[i] == '-')
 		isnegative = -1;

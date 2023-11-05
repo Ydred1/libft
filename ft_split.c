@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ydred <ydred@student.42.fr>                +#+  +:+       +#+        */
+/*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:54:38 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/01 01:10:40 by ydred            ###   ########.fr       */
+/*   Updated: 2023/11/05 11:59:06 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int	ft_cw(char const *s, char c, int *start, int *end)
+static int	ft_cw(char const *s, char c, int *start, int *end)
 {
 	char	*string;
 	int		nb;
@@ -55,7 +54,7 @@ char	**ft_split(char const *s, char c)
 			i[1]++;
 		if (s[i[0]])
 			tab[i[2]++] = ft_substr(s, i[0], i[1] - i[0]);
-		if (tab[i[2]] - 1 == NULL)
+		if (tab[i[2]] && (tab[i[2] - 1] == NULL))
 		{
 			while (i[2]-- > 0)
 				free(tab[i[2]]);
