@@ -37,7 +37,7 @@ SOURCES = 	ft_atoi.c		\
 			ft_strtrim.c	\
 			ft_substr.c		\
 			ft_tolower.c	\
-			ft_toupper.c	\
+			ft_toupper.c
 
 SOURCES_BONUS = ft_lstnew.c			\
 				ft_lstadd_front.c	\
@@ -70,7 +70,6 @@ fclean: clean
 bonus: $(OBJS_BONUS)
 	@if ! nm -u libft.a | grep lst > /dev/null ;\
 	then ar rcs $(NAME) $(OBJS_BONUS);\
-	printf "Linking bonuses\n";\
 	fi
 
 .PHONY: all re clean fclean bonus

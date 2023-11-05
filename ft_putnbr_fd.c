@@ -6,7 +6,7 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:14:51 by nmillier          #+#    #+#             */
-/*   Updated: 2023/10/31 21:10:08 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/11/05 14:43:01 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	string[11];
+	char	string[12];
 	int		i;
 	int		digit;
 
