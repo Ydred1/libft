@@ -6,7 +6,7 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:54:38 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/08 10:16:52 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:52:52 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ char	**ft_split(char const *s, char c)
 	char	**tab;
 	int		i[3];
 
+	if (!s)
+		return (NULL);
 	tab = (char **) malloc((ft_cw(s, c, &i[0], &i[1]) + 1) * sizeof(char **));
 	if (tab == NULL)
 		return (NULL);
