@@ -6,7 +6,7 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:54:38 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/08 09:48:07 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:16:52 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,18 @@ static int	ft_cw(char const *s, char c, int *start, int *end)
 
 static char	**ft_freetab(char **tab, int current)
 {
-	while (current > 0)
-		free(tab[current]);
+	while (current >= 0)
+		free(tab[current--]);
 	free(tab);
 	return (NULL);
 }
 
-static char *ft_substrclean(const char *s, unsigned int start, size_t len)
+static char	*ft_substrclean(const char *s, unsigned int start, size_t len)
 {
 	char			*newstring;
 	unsigned int	i;
-		newstring = (char *) malloc((len + 1) * sizeof(char));
+
+	newstring = (char *) malloc((len + 1) * sizeof(char));
 	if (newstring == NULL)
 		return (NULL);
 	i = 0;
@@ -81,7 +82,7 @@ char	**ft_split(char const *s, char c)
 		{
 			tab[i[2]++] = ft_substrclean(s, i[0], i[1] - i[0]);
 			if (tab[i[2] - 1] == NULL)
-				return (ft_freetab(tab, i[2]));
+				return (ft_freetab(tab, i[2] - 1));
 		}
 	}
 	tab[i[2]] = (char *) NULL;
