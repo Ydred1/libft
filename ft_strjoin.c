@@ -6,11 +6,10 @@
 /*   By: nmillier <nmillier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:53:31 by nmillier          #+#    #+#             */
-/*   Updated: 2023/11/08 09:48:37 by nmillier         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:15:38 by nmillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
